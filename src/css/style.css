@@ -16,3 +16,15 @@
 .profile-img {
     border-radius: 9px;
 }
+
+.button.is-discord {
+    background-color: #7289DA;
+    border-color: transparent;
+    color: #fff;
+  }
+
+.button.is-discord:hover, .button.is-discord.is-hovered {
+    background-color: #7777CC;
+    border-color: transparent;
+    color: #fff;
+}
