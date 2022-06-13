@@ -4,6 +4,7 @@
     margin-bottom: 2%;
     margin-top: 1%;
 }
+
 .container {
     margin-left: 4%;
     margin-right: 4%;
@@ -21,10 +22,18 @@
     background-color: #7289DA;
     border-color: transparent;
     color: #fff;
-  }
+}
 
-.button.is-discord:hover, .button.is-discord.is-hovered {
+.button.is-discord:hover,
+.button.is-discord.is-hovered {
     background-color: #7777CC;
     border-color: transparent;
     color: #fff;
+}
+
+.bottom-pinned {
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    position: absolute;
 }
