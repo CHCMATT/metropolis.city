@@ -26,7 +26,7 @@ async function sendContact(ev) {
 		}],
 	};
 
-	const webhookUrl = 'https://discord.com/api/webhooks/985737219694284870/OQ6e3HKekoe8juG3PqnLd4y1IuJKGEJV2-leKIwnBKzw5c4F2j-LA2S-TQFNgHnvXpb7';
+	const webhookUrl = '';
 
 	const response = await fetch(webhookUrl, {
 		method: 'POST',
@@ -39,6 +39,6 @@ async function sendContact(ev) {
 	if (response.ok) {
 		alert('I have received your message!');
 	} else {
-		alert('There was an error! Try again later!');
+		alert('There was an error - please try again later!');
 	}
 }
