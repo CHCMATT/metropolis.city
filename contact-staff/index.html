@@ -7,9 +7,10 @@
   <link href="https://fonts.gstatic.com" crossorigin rel="preconnect">
   <link href="https://fonts.googleapis.com/css2?family=Georama:wght@100;200;300;400;500;600;700;800;900&display=swap"
     rel="stylesheet">
-  <script src="https://kit.fontawesome.com/f7a92f9ee8.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/be02d7a628.js" crossorigin="anonymous"></script>
   <link href="/src/css/bulma.css" rel="stylesheet">
   <link href="/src/css/style.css" rel="stylesheet">
+  <script src="/src/js/contact-staff.js"></script>
   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 
@@ -33,55 +34,57 @@
   </div>
 
   <div class="container is-max-desktop">
-    <div class="field">
-      <label class="label">Discord Name</label>
-      <div class="control has-icons-left">
-        <input class="input" type="text" placeholder="chcmatt#0001">
-        <span class="icon is-small is-left">
-          <i class="fas fa-id-card"></i>
-        </span>
-      </div>
-    </div>
-
-    <div class="field">
-      <label class="label">Email</label>
-      <div class="control has-icons-left">
-        <input class="input" type="email" placeholder="chcmatt@metropolis.city">
-        <span class="icon is-small is-left">
-          <i class="fas fa-envelope"></i>
-        </span>
-      </div>
-    </div>
-
-    <div class="field">
-      <label class="label">Subject</label>
-      <div class="control">
-        <div class="select">
-          <select>
-            <option>Report a user</option>
-            <option>Suggestion/Feedback</option>
-            <option>Other</option>
-          </select>
+    <form onsubmit="sendContact(event)">
+      <div class="field">
+        <label class="label">Discord Name</label>
+        <div class="control has-icons-left">
+          <input id="discordNameInput" class="input" type="text" placeholder="chcmatt#0001">
+          <span class="icon is-small is-left">
+            <i class="fas fa-id-card"></i>
+          </span>
         </div>
       </div>
-    </div>
 
-    <div class="field">
-      <label class="label">Message</label>
-      <div class="control">
-        <textarea class="textarea" placeholder="hello,
-i like pie
-sincerely,
-chcmatt
-"></textarea>
+      <div class="field">
+        <label class="label">Email</label>
+        <div class="control has-icons-left">
+          <input id="emailAddrInput" class="input" type="email" placeholder="chcmatt@metropolis.city">
+          <span class="icon is-small is-left">
+            <i class="fas fa-envelope"></i>
+          </span>
+        </div>
       </div>
-    </div>
 
-    <div class="field is-grouped">
-      <div class="control">
-        <button class="button is-link">Contact Us</button>
+      <div class="field">
+        <label class="label">Topic</label>
+        <div class="control">
+          <div class="select">
+            <select id="topicInput">
+              <option>Report a user</option>
+              <option>Suggestion/Feedback</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
       </div>
-    </div>
+
+      <div class="field">
+        <label class="label">Message</label>
+        <div class="control">
+          <textarea id="msgInput" class="textarea"
+            placeholder="hello,&#13;&#10;i like pie&#13;&#10;sincerely,&#13;&#10;chcmatt"></textarea>
+        </div>
+      </div>
+
+      <div class="field is-grouped">
+        <div class="control">
+          <button type="submit" class="button is-link">Contact Us</button>
+        </div>
+        <div class="control">
+          <button type="reset" class="button is-light">Reset Form</button>
+        </div>
+      </div>
+    </form>
   </div>
 </body>
 
