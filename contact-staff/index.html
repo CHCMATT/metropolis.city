@@ -36,8 +36,19 @@
     </nav>
   </div>
 
+  <div id="success-message" class="notification notification-message success-message is-light is-success is-hidden">
+    <button onclick="removeSuccessMsg()" class="delete"></button>
+    We successfully sent your message to our staff team. You can expect a response <strong>within 72 hours.</strong>
+  </div>
+
+  <div id="failure-message" class="notification notification-message is-light is-danger is-hidden">
+    <button onclick="removeFailureMsg()" class="delete"></button>
+    We ran into an issue when trying to send your message to our staff team. <strong>Please report this issue in our
+      Discord server.</strong>
+  </div>
+
   <div class="container is-max-desktop">
-    <form onsubmit="sendContact(event)">
+    <form>
       <div class="field">
         <label class="label">Discord Name</label>
         <div class="control has-icons-left">
@@ -81,10 +92,16 @@
 
       <div class="field is-grouped">
         <div class="control">
-          <button type="submit" class="button is-link">Contact Us</button>
+          <button type="submit" onclick="callAwsLambdaFunction(event)" class="button is-link">Contact Us</button>
         </div>
         <div class="control">
           <button type="reset" class="button is-light">Reset Form</button>
+        </div>
+        <div class="control">
+          <button type="button" onclick="addSuccessMsg()" class="button is-light is-success">Add Success</button>
+        </div>
+        <div class="control">
+          <button type="button" onclick="addFailureMsg()" class="button is-light is-danger">Add Failure</button>
         </div>
       </div>
     </form>

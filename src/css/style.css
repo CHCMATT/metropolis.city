@@ -37,3 +37,11 @@
     right: 0%;
     position: absolute;
 }
+
+.notification-message {
+    right: 0.5%;
+    top: 6%;
+    margin-left: 80%;
+    position: absolute;
+    box-shadow: 2px 2px 2px grey;
+}
