@@ -3,29 +3,14 @@
 
 <head>
   <title>Sign Up - metropolis.city</title>
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" crossorigin rel="preconnect">
-  <link href="https://fonts.googleapis.com/css2?family=Georama:wght@100;200;300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
-  <script src="https://kit.fontawesome.com/be02d7a628.js" crossorigin="anonymous"></script>
-  <link href="/src/css/bulma.css" rel="stylesheet">
-  <link href="/src/css/style.css" rel="stylesheet">
-  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-  <link rel="icon" type="image/png" href="/src/img/m_favicon_white.png" sizes="32x32">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="/src/js/imports.js"></script>
+  <script src="/src/js/sign-up.js"></script>
 </head>
 
 <body>
-  <div id="navbar-import">
+  <div id="header-import">
   </div>
-
-  <script>
-    $(function () {
-      $("#navbar-import").load("/navbar.html");
-    });
-    $(function () {
-      $("#footer-import").load("/footer.html");
-    });
-  </script>
 
   <div class="container-large">
     <nav class="breadcrumb" aria-label="breadcrumbs">
@@ -77,12 +62,30 @@
       <div class="control">
         <label class="checkbox">
           <input type="checkbox">
-          I agree to the <a href="#">terms and conditions</a>
+          I agree to the</label> <a onclick="openModal();">terms and conditions</a>.
         </label>
       </div>
     </div>
     <div class="control">
       <button class="button is-link">Sign Up</button>
+    </div>
+  </div>
+  <div id="terms-modal" class="modal">
+    <div class="modal-background" onclick="closeModal();"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">Metropolis Terms and Conditions</p>
+        <button class="delete" onclick="closeModal();"></button>
+      </header>
+      <section class="modal-card-body">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Elementum eu facilisis sed odio morbi. Tortor vitae purus faucibus ornare suspendisse sed nisi.
+          Bibendum est ultricies integer quis auctor elit. Tellus mauris a diam maecenas sed enim ut sem. Neque sodales
+          ut etiam sit amet nisl purus in mollis. Condimentum lacinia quis vel eros donec.</p>
+      </section>
+      <footer class="modal-card-foot">
+        <button class="button" onclick="closeModal();">Okay</button>
+      </footer>
     </div>
   </div>
   <div id="footer-import">

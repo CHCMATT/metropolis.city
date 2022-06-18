@@ -3,30 +3,14 @@
 
 <head>
   <title>Contact Staff - metropolis.city</title>
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" crossorigin rel="preconnect">
-  <link href="https://fonts.googleapis.com/css2?family=Georama:wght@100;200;300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
-  <script src="https://kit.fontawesome.com/be02d7a628.js" crossorigin="anonymous"></script>
-  <link href="/src/css/bulma.css" rel="stylesheet">
-  <link href="/src/css/style.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="/src/js/imports.js"></script>
   <script src="/src/js/contact-staff.js"></script>
-  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-  <link rel="icon" type="image/png" href="/src/img/m_favicon_white.png" sizes="32x32">
 </head>
 
 <body>
-  <div id="navbar-import">
+  <div id="header-import">
   </div>
-
-  <script>
-    $(function () {
-      $("#navbar-import").load("/navbar.html");
-    });
-    $(function () {
-      $("#footer-import").load("/footer.html");
-    });
-  </script>
 
   <div class="container-large">
     <nav class="breadcrumb" aria-label="breadcrumbs">
@@ -38,12 +22,12 @@
   </div>
 
   <div id="success-message" class="notification notification-message success-message is-light is-success is-hidden">
-    <button onclick="removeSuccessMsg()" class="delete"></button>
+    <button onclick="removeSuccessMsg();" class="delete"></button>
     We successfully sent your message to our staff team. You can expect a response <strong>within 72 hours.</strong>
   </div>
 
   <div id="failure-message" class="notification notification-message is-light is-danger is-hidden">
-    <button onclick="removeFailureMsg()" class="delete"></button>
+    <button onclick="removeFailureMsg();" class="delete"></button>
     We ran into an issue when trying to send your message to our staff team. <strong>Please report this issue in our
       Discord server.</strong>
   </div>
