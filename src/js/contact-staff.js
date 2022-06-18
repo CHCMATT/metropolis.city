@@ -1,8 +1,5 @@
 async function callAwsLambdaFunction(ev) {
 	ev.preventDefault();
-	//var xhttp = new XMLHttpRequest();
-	//let resp = xhttp.open("GET", "https://u0chp9ryi3.execute-api.us-east-1.amazonaws.com/default/testPostMsg2", true);
-	//xhttp.send();
 
 	const resp = await fetch("https://u0chp9ryi3.execute-api.us-east-1.amazonaws.com/default/testPostMsg2", {
 		method: 'GET',
