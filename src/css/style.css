@@ -45,3 +45,11 @@
     position: absolute;
     box-shadow: 2px 2px 2px grey;
 }
+
+#tab-content p {
+    display: none;
+}
+
+#tab-content p.is-active {
+    display: block;
+}

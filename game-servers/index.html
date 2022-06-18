@@ -12,21 +12,13 @@
 	<link href="/src/css/style.css" rel="stylesheet">
 	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 	<script src="/src/js/imports.js"></script>
+	<script src="/src/js/game-servers.js"></script>
 	<link href="/src/img/m_favicon_white.png" rel="icon" type="image/png">
 </head>
 
 <body>
 	<div id="header-import">
 	</div>
-
-	<script>
-		$(function () {
-			$("#navbar-import").load("/navbar.html");
-		});
-		$(function () {
-			$("#footer-import").load("/footer.html");
-		});
-	</script>
 
 	<div class="container-large">
 		<nav class="breadcrumb">
@@ -37,14 +29,21 @@
 		</nav>
 	</div>
 	<div class="container">
-		<div class="tabs">
+		<div class="tabs" id="tabs">
 			<ul>
-				<li class="is-active"><a>Minecraft</a></li>
-				<li><a>ARK: Survival Evolved</a></li>
-				<li><a>Terraria</a></li>
-				<li><a>7 Days to Die</a></li>
-				<li><a>Project Zomboid</a></li>
+				<li data-tab="1" class="is-active"><a>7 Days to Die</a></li>
+				<li data-tab="2" class=""><a>ARK: Survival Evolved</a></li>
+				<li data-tab="3" class=""><a>Minecraft</a></li>
+				<li data-tab="4" class=""><a>Project Zomboid</a></li>
+				<li data-tab="5" class=""><a>Terraria</a></li>
 			</ul>
+		</div>
+		<div id="tab-content">
+			<p class="is-active" data-content="1">7 Days to Die</p>
+			<p data-content="2">ARK: Survival Evolved</p>
+			<p data-content="3">Minecraft</p>
+			<p data-content="4">Project Zomboid</p>
+			<p data-content="5">Terraria</p>
 		</div>
 	</div>
 	<div id="footer-import">
