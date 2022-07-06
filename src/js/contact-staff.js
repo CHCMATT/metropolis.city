@@ -66,23 +66,6 @@ function addAlert(alertData) {
 	}
 }
 
-// REMOVE SUCCESS NOTIFICATION
-function removeSuccessMsg() {
-  var element = document.getElementById("success-alert");
-	if(element) {
-  	element.remove();
-	}
-}
-
-// REMOVE FAILURE NOTIFICATION
-function removeFailureMsg() {
-  var element = document.getElementById("failure-alert");
-	if(element) {
-  	element.remove();
-	}
-}
-
-
 // ADD SUCCESS ALERT
 function addSuccessMsg() {
 	document.getElementById("contact-button").classList.remove("is-loading");
@@ -110,4 +93,20 @@ function addFailureMsg(alertData) {
 	setTimeout(async function () {
 		removeFailureMsg(); 
 	}, 10000);
+}
+
+// REMOVE SUCCESS NOTIFICATION
+function removeSuccessMsg() {
+  var element = document.getElementById("success-alert");
+	if(element) {
+  	element.remove();
+	}
+}
+
+// REMOVE FAILURE NOTIFICATION
+function removeFailureMsg() {
+  var element = document.getElementById("failure-alert");
+	if(element) {
+  	element.remove();
+	}
 }
