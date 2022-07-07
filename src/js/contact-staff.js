@@ -86,10 +86,9 @@ function addFailureMsg(alertData) {
 	<button onclick="removeFailureMsg();" class="delete"></button>
 	We ran into an issue when trying to send your message to our staff team. <strong>Please report the error code below
 		to our Discord server.</strong>
-	<p id="error-code"></p>
+	<p id="error-code">${alertData}</p>
 </div>`
   document.getElementById("alerts").innerHTML = document.getElementById("alerts").innerHTML + failureAlert;
-	document.getElementById("error-code").innerText = alertData;
 	setTimeout(async function () {
 		removeFailureMsg(); 
 	}, 10000);
