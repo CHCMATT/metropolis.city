@@ -12,7 +12,6 @@ async function sendDiscordMsg(webhookBody) {
       return response.json();
     })
     .then(function(data) {
-			console.log(`data: ${data}`);
 			addAlert(data);
 			return data;
     });
@@ -58,7 +57,6 @@ async function sendContact(ev) {
 }
 
 function addAlert(alertData) {
-	console.log(`alertData: ${alertData}`);
 	if (alertData == "success") {
 		addSuccessMsg();
 	} else {
@@ -71,7 +69,7 @@ function addSuccessMsg() {
 	document.getElementById("contact-button").classList.remove("is-loading");
 	successAlert = `<div id="success-alert" class="notification notification-message success-message is-light is-success">
 	<button onclick="removeSuccessMsg();" class="delete"></button>
-	We successfully sent your message to our staff team. You can expect a response <strong>within 72 hours.</strong>
+	We successfully sent your message to our staff team. <strong>You can expect a response within 72 hours.</strong>
 </div>`
   document.getElementById("alerts").innerHTML = document.getElementById("alerts").innerHTML + successAlert;
 	setTimeout(async function () {
