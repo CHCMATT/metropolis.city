@@ -50,6 +50,7 @@
 	display: block;
 }
 /* navbar black-ter */
+
 .navbar.is-black-ter {
 	background-color: #242424;
 	color: white;
@@ -67,7 +68,7 @@
 .navbar.is-black-ter .navbar-burger {
 	color: white;
 }
-@media screen and (min-width: 1024px) {
+@media {
 	.navbar.is-black-ter .navbar-start > .navbar-item,.navbar.is-black-ter .navbar-start .navbar-link,.navbar.is-black-ter .navbar-end > .navbar-item,.navbar.is-black-ter .navbar-end .navbar-link {
 		color: white;
 	}
@@ -86,6 +87,14 @@
 		background-color: #161616;
 		color: white;
 	}
+}
+.navbar-menu {
+	background-color: #242424;
+	box-shadow: 0 8px 16px rgba(10, 10, 10, 0.1);
+	padding: 0.5rem 0;
+}
+.navbar-menu.is-active {
+	display: block;
 }
 /* fix darker grey navbar dropdown hover items */
 .navbar-dropdown a.navbar-item:focus, .navbar-dropdown a.navbar-item:hover {
@@ -147,4 +156,18 @@ a:hover, a:focus {
 
 .navbar a {
   color: whitesmoke !important;
+}
+
+/* YouTube embed container */
+.video-container {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	height: 0;
+}
+.video-container iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
