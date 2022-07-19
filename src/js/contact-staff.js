@@ -13,6 +13,7 @@ async function sendDiscordMsg(webhookBody) {
     })
     .then(function(data) {
 			addAlert(data);
+			console.log(data);
 			return data;
     });
 	}

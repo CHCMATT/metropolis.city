@@ -2726,8 +2726,7 @@ div.icon-text {
 }
 
 .table {
-  background-color: white;
-  color: #363636;
+  color: currentColor;
 }
 
 .table td,
@@ -2742,7 +2741,7 @@ div.icon-text {
 .table th.is-white {
   background-color: white;
   border-color: white;
-  color: #0a0a0a;
+  color: currentColor;
 }
 
 .table td.is-black,
@@ -2833,7 +2832,7 @@ div.icon-text {
 }
 
 .table th {
-  color: #363636;
+  color: currentColor;
 }
 
 .table th:not([align]) {
@@ -2863,7 +2862,7 @@ div.icon-text {
 .table thead td,
 .table thead th {
   border-width: 0 0 2px;
-  color: #363636;
+  color: currentColor;
 }
 
 .table tfoot {
@@ -3193,7 +3192,7 @@ a.tag:hover {
 }
 
 .title {
-  color: #363636;
+  color: currentColor;
   font-size: 2rem;
   font-weight: 600;
   line-height: 1.125;
@@ -3237,7 +3236,7 @@ a.tag:hover {
 }
 
 .subtitle {
-  color: #4a4a4a;
+  color: currentColor;
   font-size: 1.25rem;
   font-weight: 400;
   line-height: 1.25;
@@ -3305,26 +3304,26 @@ a.tag:hover {
 
 /* Bulma Form */
 .input, .textarea, .select select {
-  background-color: white;
+  background-color: #242424;
   border-color: #dbdbdb;
   border-radius: 4px;
-  color: #363636;
+  color: currentColor;
 }
 
 .input::-moz-placeholder, .textarea::-moz-placeholder, .select select::-moz-placeholder {
-  color: rgba(54, 54, 54, 0.3);
+  color: #b5b5b5 !important;
 }
 
 .input::-webkit-input-placeholder, .textarea::-webkit-input-placeholder, .select select::-webkit-input-placeholder {
-  color: rgba(54, 54, 54, 0.3);
+  color: #b5b5b5 !important;
 }
 
 .input:-moz-placeholder, .textarea:-moz-placeholder, .select select:-moz-placeholder {
-  color: rgba(54, 54, 54, 0.3);
+  color: #b5b5b5 !important;
 }
 
 .input:-ms-input-placeholder, .textarea:-ms-input-placeholder, .select select:-ms-input-placeholder {
-  color: rgba(54, 54, 54, 0.3);
+  color: #b5b5b5 !important;
 }
 
 .input:hover, .textarea:hover, .select select:hover, .is-hovered.input, .is-hovered.textarea, .select select.is-hovered {
@@ -3332,7 +3331,7 @@ a.tag:hover {
 }
 
 .input:focus, .textarea:focus, .select select:focus, .is-focused.input, .is-focused.textarea, .select select.is-focused, .input:active, .textarea:active, .select select:active, .is-active.input, .is-active.textarea, .select select.is-active {
-  border-color: #485fc7;
+  border-color: whitesmoke;
   box-shadow: 0 0 0 0.125em rgba(72, 95, 199, 0.25);
 }
 
@@ -3539,7 +3538,7 @@ fieldset[disabled] .select select:-ms-input-placeholder,
 }
 
 .checkbox:hover, .radio:hover {
-  color: #363636;
+  color: currentColor;
 }
 
 .checkbox[disabled], .radio[disabled],
@@ -3567,7 +3566,7 @@ fieldset[disabled] .radio,
 }
 
 .select:not(.is-multiple):not(.is-loading)::after {
-  border-color: #485fc7;
+  border-color: whitesmoke;
   right: 1.125em;
   z-index: 4;
 }
@@ -3608,7 +3607,7 @@ fieldset[disabled] .select select:hover {
 }
 
 .select:not(.is-multiple):not(.is-loading):hover::after {
-  border-color: #363636;
+  border-color: whitesmoke;
 }
 
 .select.is-white:not(:hover)::after {
@@ -4254,7 +4253,7 @@ fieldset[disabled] .select select:hover {
 }
 
 .label {
-  color: #363636;
+  color: currentColor;
   display: block;
   font-size: 1rem;
   font-weight: 700;
@@ -4525,7 +4524,7 @@ fieldset[disabled] .select select:hover {
 .control.has-icons-left .input:focus ~ .icon,
 .control.has-icons-left .select:focus ~ .icon, .control.has-icons-right .input:focus ~ .icon,
 .control.has-icons-right .select:focus ~ .icon {
-  color: #4a4a4a;
+  color: whitesmoke;
 }
 
 .control.has-icons-left .input.is-small ~ .icon,
@@ -5358,6 +5357,7 @@ button.dropdown-item.is-active {
   flex-direction: column;
   max-height: calc(100vh - 40px);
   overflow: hidden;
+  overflow-y: visible;
   -ms-overflow-y: visible;
 }
 
@@ -6388,7 +6388,7 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
     border-bottom-left-radius: 6px;
     border-bottom-right-radius: 6px;
     border-top: 2px solid #dbdbdb;
-    box-shadow: 0 8px 8px rgba(10, 10, 10, 0.1);
+    box-shadow: 0 8px 8px rgba(10, 10, 10, .1);
     display: none;
     font-size: 0.875rem;
     left: 0;
