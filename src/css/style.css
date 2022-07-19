@@ -68,7 +68,7 @@
 .navbar.is-black-ter .navbar-burger {
 	color: white;
 }
-@media {
+@media screen {
 	.navbar.is-black-ter .navbar-start > .navbar-item,.navbar.is-black-ter .navbar-start .navbar-link,.navbar.is-black-ter .navbar-end > .navbar-item,.navbar.is-black-ter .navbar-end .navbar-link {
 		color: white;
 	}
