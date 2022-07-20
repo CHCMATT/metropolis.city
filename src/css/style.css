@@ -197,4 +197,27 @@ a:hover, a:focus {
 	.navbar-divider {
     display: block;
   }
+	.navbar-burger span {
+		background-color: currentColor;
+		display: block;
+		height: 2px;
+		width: 32px;
+		left: calc(50% - 16px);
+		position: absolute;
+		transform-origin: center;
+		transition-duration: 86ms;
+		transition-property: background-color, opacity, transform;
+		transition-timing-function: ease-out;
+	}
+	.navbar-burger span:nth-child(1) {
+		top: calc(50% - 12px);
+	}
+	
+	.navbar-burger span:nth-child(2) {
+		top: calc(50% - 2px);
+	}
+	
+	.navbar-burger span:nth-child(3) {
+		top: calc(50% + 8px);
+	}
 }

@@ -4,17 +4,20 @@ function toggleNav() {
 	var navbkg = document.getElementById("nav-background");
 	navbkg.style.display = "block";
 	if (!nav.classList.contains("is-active")) {
-			nav.classList.add("is-active");
-			navbkg.style.display = "block";
+		console.log('opening navbar on mobile');
+		nav.classList.add("is-active");
+		navbkg.style.display = "block";
 	}
 	else {
-			nav.classList.remove("is-active");
-			navbkg.style.display = "none";
+		console.log('closing navbar on mobile');
+		nav.classList.remove("is-active");
+		navbkg.style.display = "none";
+			
 	}
 }
 
 function closeNav() {
-	console.log('closing navbar')
+	console.log('closing navbar menu');
 	var nav = document.getElementById("nav-menu");
 	var navdropdown = document.getElementById("game-servers");
 	var navbkg = document.getElementById("nav-background");
@@ -30,6 +33,7 @@ if (window.matchMedia("(max-width: 1080px)").matches) {
 	if ($navDropdowns.length > 0) {
 		// HIDE THE DROP-DOWN ON THE INITIAL LOAD
 		$navDropdowns.forEach((el) => {
+			console.log('dropdown hidden by default');
 			const target = el.dataset.target;
 			const $target = document.getElementById(target);
 			$target.style.display = "none";
@@ -42,8 +46,10 @@ if (window.matchMedia("(max-width: 1080px)").matches) {
 				const $target = document.getElementById(target);
 
 				if ($target.style.display === "block") {
+					console.log('closing mobile navbar dropdown');
 					$target.style.display = "none";
 				} else {
+					console.log('opening mobile navbar dropdown');
 					$target.style.display = "block";
 					
 				}
