@@ -12,7 +12,6 @@ function toggleNav() {
 		console.log('closing navbar on mobile');
 		nav.classList.remove("is-active");
 		navbkg.style.display = "none";
-			
 	}
 }
 
@@ -27,6 +26,37 @@ function closeNav() {
 }
 
 /** The jQuery will trigger only at mobile viewport */
+if (window.matchMedia("(min-device-width: 850px)").matches) { 
+	const $navDropdowns = document.querySelectorAll(".navbar-item.has-dropdown");
+	if ($navDropdowns.length > 0) {
+		// HIDE THE DROP-DOWN ON THE INITIAL LOAD
+		$navDropdowns.forEach((el) => {
+			console.log('dropdown hidden by default');
+			const target = el.dataset.target;
+			const $target = document.getElementById(target);
+			var navbkg = document.getElementById("nav-background");
+			$target.style.display = "none";
+			//Register the click event on the dropdown list
+			el.addEventListener("click", () => {
+				// Get the target from the "data-target" attribute
+				const target = el.dataset.target;
+				const $target = document.getElementById(target);
+				if ($target.style.display === "block") {
+					console.log('closing navbar dropdown');
+					$target.style.display = "none";
+					navbkg.style.display = "none";
+				} else {
+					console.log('opening navbar dropdown');
+					$target.style.display = "block";
+					navbkg.style.display = "block";
+				}
+			});
+		});
+	}
+}
+
+/** The jQuery will trigger only at mobile viewport */
+if (window.matchMedia("(max-device-width: 850px)").matches) { 
 	const $navDropdowns = document.querySelectorAll(".navbar-item.has-dropdown");
 	if ($navDropdowns.length > 0) {
 		// HIDE THE DROP-DOWN ON THE INITIAL LOAD
@@ -35,22 +65,19 @@ function closeNav() {
 			const target = el.dataset.target;
 			const $target = document.getElementById(target);
 			$target.style.display = "none";
-
 			//Register the click event on the dropdown list
 			el.addEventListener("click", () => {
 				// Get the target from the "data-target" attribute
-
 				const target = el.dataset.target;
 				const $target = document.getElementById(target);
-
 				if ($target.style.display === "block") {
-					console.log('closing navbar dropdown');
+					console.log('closing mobile navbar dropdown');
 					$target.style.display = "none";
 				} else {
-					console.log('opening navbar dropdown');
+					console.log('opening mobile navbar dropdown');
 					$target.style.display = "block";
-					
 				}
 			});
 		});
 	}
+}
