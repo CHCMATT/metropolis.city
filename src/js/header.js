@@ -1,13 +1,28 @@
 document.getElementById("nav-toggle").addEventListener ("click", toggleNav);
 function toggleNav() {
 	var nav = document.getElementById("nav-menu");
+	var navbkg = document.getElementById("nav-background");
+	navbkg.style.display = "block";
 	if (!nav.classList.contains("is-active")) {
 			nav.classList.add("is-active");
+			navbkg.style.display = "block";
 	}
 	else {
 			nav.classList.remove("is-active");
+			navbkg.style.display = "none";
 	}
 }
+
+function closeNav() {
+	console.log('closing navbar')
+	var nav = document.getElementById("nav-menu");
+	var navdropdown = document.getElementById("game-servers");
+	var navbkg = document.getElementById("nav-background");
+	nav.classList.remove("is-active");
+	navdropdown.style.display = "none";
+	navbkg.style.display = "none";
+}
+
 /** The jQuery will trigger only at mobile viewport */
 if (window.matchMedia("(max-width: 1080px)").matches) {   
 	console.log('mobile device found'); 
@@ -22,13 +37,15 @@ if (window.matchMedia("(max-width: 1080px)").matches) {
 			//Register the click event on the dropdown list
 			el.addEventListener("click", () => {
 				// Get the target from the "data-target" attribute
+
 				const target = el.dataset.target;
 				const $target = document.getElementById(target);
-				
+
 				if ($target.style.display === "block") {
 					$target.style.display = "none";
 				} else {
 					$target.style.display = "block";
+					
 				}
 			});
 		});
