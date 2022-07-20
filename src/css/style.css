@@ -37,7 +37,7 @@
 }
 .notification-message {
 	right: 0.5%;
-	top: 6%;
+	top: 8%;
 	margin-left: 80%;
 	position: absolute;
 	box-shadow: 2px 2px 2px grey;
@@ -220,5 +220,13 @@ a:hover, a:focus {
 	
 	.navbar-burger span:nth-child(3) {
 		top: calc(50% + 8px);
+	}
+	.notification-message {
+		right: 0.5%;
+		top: 6%;
+		margin-left: 30%;
+		position: absolute;
+		box-shadow: 2px 2px 2px grey;
+		z-index: 10;
 	}
 }
