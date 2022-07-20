@@ -44,10 +44,10 @@ function closeNav() {
 				const $target = document.getElementById(target);
 
 				if ($target.style.display === "block") {
-					console.log('closing mobile navbar dropdown');
+					console.log('closing navbar dropdown');
 					$target.style.display = "none";
 				} else {
-					console.log('opening mobile navbar dropdown');
+					console.log('opening navbar dropdown');
 					$target.style.display = "block";
 					
 				}
