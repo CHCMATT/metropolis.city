@@ -27,8 +27,6 @@ function closeNav() {
 }
 
 /** The jQuery will trigger only at mobile viewport */
-if (window.matchMedia("(max-width: 1080px)").matches) {   
-	console.log('mobile device found'); 
 	const $navDropdowns = document.querySelectorAll(".navbar-item.has-dropdown");
 	if ($navDropdowns.length > 0) {
 		// HIDE THE DROP-DOWN ON THE INITIAL LOAD
@@ -56,5 +54,3 @@ if (window.matchMedia("(max-width: 1080px)").matches) {
 			});
 		});
 	}
-}
-	
