@@ -87,6 +87,9 @@
 		background-color: #161616;
 		color: white;
 	}
+	.navbar-divider {
+    display: block;
+  }
 }
 .navbar-menu {
 	background-color: #242424;
